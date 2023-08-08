@@ -57,7 +57,10 @@ This will produce `main.js` which you can load from a custom HTML file like this
   <script src="main.js"></script>
 </head>
 <body>
-  <script>var app = Elm.Main.init();</script>
+  <div id="elm-node"></div>
+	<script>Elm.Main.init({
+			node: document.getElementById("elm-node")
+		})</script>
 </body>
 </html>
 ```
